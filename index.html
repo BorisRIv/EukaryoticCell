@@ -1,0 +1,178 @@
+<!-- Изготвено от Борис Иванов, 9А. Випуск 2024/2025 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Еукариотна Клетка</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h2>Еукариотна Клетка</h2>
+	<h4>Проект по Биология</h4>
+  </div>
+
+<div class="tabs">
+  <a href="https://github.com/BorisRIv/EukaryoticCell" class="tab" target="_blank">GitHub</a>
+</div>
+
+
+  <div class="sidebar-footer">
+    <small>Изготвено от Борис Иванов, 9А</small>
+	<br>
+	<small>Випуск 2024/2025</small>
+  </div>
+</div>
+
+<!-- Background -->
+<div class="background"></div>
+
+<!-- Main content -->
+<div class="container">
+
+  <!-- Cell Image -->
+  <div class="cell-wrapper">
+    <img src="Assets/CellMain.png" alt="Cell" class="cell" id="cell" />
+    <button class="hotspot" style="top:60%;left:19%;" data-id="cytoplasm"></button>
+    <button class="hotspot" style="top:40%;left:24%;" data-id="microtubules"></button>
+    <button class="hotspot" style="top:22%;left:26%;" data-id="plasma-memrane"></button>
+	<button class="hotspot" style="top:15%;left:58%;" data-id="vacuole"></button>
+	<button class="hotspot" style="top:24%;left:64%;" data-id="centrioles"></button>
+	<button class="hotspot" style="top:24%;left:75%;" data-id="lysosomes"></button>
+	<button class="hotspot" style="top:32%;left:59%" data-id="nucleus"></button>
+	<button class="hotspot" style="top:44%;left:61%;" data-id="nucleolus"></button>
+	<button class="hotspot" style="top:47%;left:86%;" data-id="mitochondria"></button>
+	<button class="hotspot" style="top:77%;left:87%;" data-id="microvilli"></button>
+	<button class="hotspot" style="top:59%;left:69%;" data-id="rough-endoplasmic-reticulum"></button>
+	<button class="hotspot" style="top:68%;left:64%;" data-id="smooth-endoplasmic-reticulum"></button>
+	<button class="hotspot" style="top:69%;left:53%;" data-id="ribosome"></button>
+	<button class="hotspot" style="top:67%;left:32%;" data-id="golgi-complex"></button>
+  </div>
+
+  <!-- Line -->
+  <svg class="line-svg">
+    <line id="line" x1="0" y1="0" x2="0" y2="0" stroke="white" stroke-width="3" />
+  </svg>
+
+  <!-- Info Panel -->
+  <div class="info" id="info">
+    <img id="info-img" src="" alt="">
+    <div id="info-content">
+      <h2 id="info-title"></h2>
+      <h4 id="info-subtitle"></h4>
+      <p id="info-text"></p>
+    </div>
+  </div>
+
+  <!-- Info Templates (hidden) -->
+  <div id="info-templates" style="display:none;">
+    <div class="template" data-id="cytoplasm" data-img="Assets/01cytoplasm.png">
+      <h2>Цитоплазма</h2>
+      <h4>Вътрешната течна среда на клетките</h4>
+      <p>- Съдържа минерални соли, вода, белтъци и въглехидрати</p>
+    </div>
+    <div class="template" data-id="microtubules" data-img="Assets/02microtubules.png">
+      <h2>Микротубули</h2>
+      <h4>Основни компоненти на цитоскелета</h4>
+      <p>- Изградени са от α и β-тубулин</p>
+	  <p>- Те са кухи цилиндрични структури с диаметър ~25nm</p>
+	  <p>- Осигуряват клетъчна форма, вътреклетъчен транспорт и участват в клетъчното делене</p>
+    </div>
+    <div class="template" data-id="plasma-memrane" data-img="Assets/03plasma-memrane.png">
+      <h2>Клетъчна Мембрана</h2>
+      <h4>Част от устройството на клетъчното ядро</h4>
+      <p>- Двойна мембрана (вътрешна и външна)</p>
+	  <p>- Перинуклеарно пространство</p>
+	  <p>- Пори</p>
+    </div>
+    <div class="template" data-id="vacuole" data-img="Assets/04vacuole.png">
+      <h2>Вакуоли</h2>
+      <h4>Едномембранни цитоплазмени органели</h4>
+      <p>- Органели с клетъчен сок</p>
+	  <p>- Характерни предимно за растенията</p>
+    </div>
+    <div class="template" data-id="centrioles" data-img="Assets/05centrioles.png">
+      <h2>Центриоли</h2>
+      <h4>Цилиндрични структури от микротубули</h4>
+      <p>- Намират се в животинските клетки</p>
+	  <p>- Участват в организирането на делителното вретено при клетъчното делене</p>
+	  <p>- Важни за правилното разпределение на хромозомите</p>
+    </div>
+    <div class="template" data-id="lysosomes" data-img="Assets/06lysosomes.png">
+      <h2>Лизозоми</h2>
+      <h4>Едномембранни цитоплазмени органели</h4>
+      <p>- Вакуоли с хидролитични ензими, отделяни от апарата на Голджи, pH=5</p>
+	  <p>- Вътреклетъчно смилане - разграждане на хранителни вещества и рециклиране на повредени органели</p>
+	  <p>- Участват в програмирана клетъчна смърт</p>
+    </div>
+    <div class="template" data-id="nucleus" data-img="Assets/07nucleus.png">
+      <h2>Клетъчно ядро</h2>
+      <h4>Контролен център на клетката</h4>
+      <p>- Функции - репликация и съхранение на ДНК</p>
+	  <p>- Форми - сферична, елипсовидна, вретеновидна, пясъчен часовник (когато левкоцитите преминават през капилярите)</p>
+	  <p>- Почти всички еукариотни клетки имат 1 централно разположено ядро</p>
+	  <p>- Устройство - ядрена мембрана, хроматин, ядърце и ядрен сок</p>
+    </div>
+    <div class="template" data-id="nucleolus" data-img="Assets/08nucleolus.png">
+      <h2>Ядърце</h2>
+      <h4>Част от устройството на клетъчното ядро</h4>
+      <p>- Сферично, неограничено от мембрана</p>
+	  <p>- 1 или 2 до 10 участват в синтез на рибозомните субединици и рРНК</p>
+	  <p>- По време на делението се разпадат и стават част от хромозомите</p>
+	  <p>- Главно от РНК + малко ДНК</p>
+    </div>
+    <div class="template" data-id="mitochondria" data-img="Assets/09mitochondria.png">
+      <h2>Митохондрии</h2>
+      <h4>Двумембранни цитоплазмени органели</h4>
+      <p>- Устройство - външна мембрана, вътрешна мембрана (образува гънки, наречени кристи), матрикс, кръгова ДНК и рибозоми</p>
+	  <p>- Осигуряват енергия на клетката чрез реакции на окисление (окислително фосфорилиране)</p>
+	  <p>- Получената енергия се включва в АТФ</p>
+    </div>
+    <div class="template" data-id="microvilli" data-img="Assets/10microvilli.png">
+      <h2>Микровили</h2>
+      <h4>Образувания на свободната повърхност на клетката</h4>
+      <p>- Увеличават многократно повърхността на мембраната</p>
+	  <p>- Могат да бъдат с еднаква или с различна дължина и диаметър</p>
+	  <p>- В централната част на микровилите е разположено снопче от актинови филаменти (нишки), които поддържат стабилността на структурата</p>
+    </div>
+    <div class="template" data-id="rough-endoplasmic-reticulum" data-img="Assets/11rough-endoplasmic-reticulum.png">
+      <h2>Зърнеста ендоплазмена мрежа</h2>
+      <h4>Една от двата вида ендоплазмени мрежи</h4>
+	  <p>- Функции - синтез на липиди и мембрани, модификации и зреене на белтъци, опаковка на молекули за транспорт</p>
+	  <p>- Тази ендоплазмена мрежа има функцията синтез и транспорт на протеини</p>
+    </div>
+    <div class="template" data-id="smooth-endoplasmic-reticulum" data-img="Assets/12smooth-endoplasmic-reticulum.png">
+      <h2>Гладка ендоплазмена мрежа</h2>
+      <h4>Една от двата вида ендоплазмени мрежи</h4>
+	  <p>- Функции - синтез на липиди и мембрани, модификации и зреене на белтъци, опаковка на молекули за транспорт</p>
+	  <p>- Тази ендоплазмена мрежа има функцията синтез на липиди и полизахариди</p>
+    </div>
+    <div class="template" data-id="ribosome" data-img="Assets/13ribosome.png">
+      <h2>Рибозоми</h2>
+      <h4>Немембранни цитоплазмени органели</h4>
+      <p>- Функция - синтез на белтъци</p>
+	  <p>- Строеж - 2 частици (малка и голяма)</p>
+	  <p>- Срещат се в митохондриите, хлоропластите и цитоплазмата</p>
+    </div>
+    <div class="template" data-id="golgi-complex" data-img="Assets/14golgi-complex.png">
+      <h2>Апарат на Голджи</h2>
+      <h4>Едномембранен цитоплазмен органел</h4>
+      <p>- Състои се от 20-30 цистерни, които отделят вакуоли от краищата си</p>
+	  <p>- Функции - обработка, кондензиране и пакетиране на продукти за транспорт</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Loading Spinner -->
+<div id="loading-spinner">
+  <div class="spinner"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
